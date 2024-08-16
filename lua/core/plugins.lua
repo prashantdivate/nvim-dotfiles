@@ -24,6 +24,16 @@ require("lazy").setup({
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
+  "AckslD/nvim-neoclip.lua",
+  "Vonr/align.nvim",
+  "f-person/git-blame.nvim",
+  "petertriho/nvim-scrollbar",
+  "rmagatti/goto-preview",
+  "tanvirtin/vgit.nvim",
+  "alvarosevilla95/luatab.nvim",
+  "notomo/gesture.nvim",
+  "folke/which-key.nvim",
+  "folke/trouble.nvim",
   {
     "vinnymeller/swagger-preview.nvim",
     run = "npm install -g swagger-ui-watcher",
@@ -37,3 +47,4 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" }
   },
 })
+
