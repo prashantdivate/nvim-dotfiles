@@ -1,6 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,9 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("core.options")
 require("core.keymaps")
 require("core.plugins")
 require("core.plugin_config")
-
+require('lspconfig').pyright.setup{}
+require('lspconfig').ts_ls.setup{}
+require('lspconfig').clangd.setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.cmake.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.rnix.setup{}
+require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.dockerls.setup{}
+require'lspconfig'.bitbake_language_server.setup{}
+require'lspconfig'.bitbake_ls.setup{}

@@ -17,10 +17,14 @@ require("lazy").setup({
   -- completion
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-path",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-vsnip",
+  "hrsh7th/cmp-calc",
+  "hrsh7th/cmp-emoji",
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
-  "github/copilot.vim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
@@ -34,6 +38,10 @@ require("lazy").setup({
   "notomo/gesture.nvim",
   "folke/which-key.nvim",
   "folke/trouble.nvim",
+  --- plugins from song
+  "kergoth/vim-bitbake",
+  "ekalinin/Dockerfile.vim",
+  "onsails/lspkind.nvim",
   {
     "vinnymeller/swagger-preview.nvim",
     run = "npm install -g swagger-ui-watcher",
@@ -46,5 +54,20 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim", tag = "0.1.4",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
+  {
+        "nvim-treesitter/nvim-treesitter",
+  },
+  {
+  "j-hui/fidget.nvim",
+  opts = {
+    -- options
+  },
+  },
+  --- lsp_signature
+  {
+  "ray-x/lsp_signature.nvim",
+  event = "VeryLazy",
+  opts = {},
+  config = function(_, opts) require'lsp_signature'.setup(opts) end
+  },
 })
-

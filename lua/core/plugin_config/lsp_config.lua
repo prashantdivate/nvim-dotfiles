@@ -60,3 +60,41 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+lua require'lspconfig'.pyright.setup{}
+lua require'lspconfig'.bashls.setup{}
+lua require'lspconfig'.clangd.setup{}
+lua require'lspconfig'.cmake.setup{}
+lua require'lspconfig'.pyright.setup{}
+lua require'lspconfig'.rnix.setup{}
+lua require'lspconfig'.rust_analyzer.setup{}
+lua << EOF
+require'lspconfig'.yamlls.setup{
+    settings = {
+        yaml = {
+            schemas = {
+                ["https://json.schemastore.org/bamboo-spec.json"] = "/bamboo-specs/*"
+            },
+        },
+    }
+}
+EOF
+lua require'lspconfig'.dockerls.setup{}
+lua vim.fn.sign_define("LspDiagnosticsSignError", {text = "", texthl = "GruvboxRed"})
+lua vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", texthl = "GruvboxYellow"})
+lua vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", texthl = "GruvboxBlue"})
+lua vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", texthl = "GruvboxAqua"})
+lua << EOF
+require('nvim-treesitter.configs').setup {
+  ensure_installed = "all",
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
+}
+EOF

@@ -16,6 +16,7 @@ vim.opt.expandtab = true
 
 vim.cmd [[ set noswapfile ]]
 vim.cmd [[ set termguicolors ]]
+vim.cmd [[ set complete=.,w,b,u,U ]]
 
 --Line numbers
 vim.wo.number = true
