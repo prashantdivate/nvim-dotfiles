@@ -37,11 +37,16 @@ require("lazy").setup({
   "alvarosevilla95/luatab.nvim",
   "notomo/gesture.nvim",
   "folke/which-key.nvim",
+  "onsails/lspkind.nvim",
   "folke/trouble.nvim",
   --- plugins from song
   "kergoth/vim-bitbake",
   "ekalinin/Dockerfile.vim",
-  "onsails/lspkind.nvim",
+  "akinsho/org-bullets.nvim",
+  "p00f/nvim-ts-rainbow",
+  "simrat39/symbols-outline.nvim",
+  "ctrlpvim/ctrlp.vim",
+  "echasnovski/mini.nvim",
   {
     "vinnymeller/swagger-preview.nvim",
     run = "npm install -g swagger-ui-watcher",

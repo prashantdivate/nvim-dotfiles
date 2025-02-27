@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 require("core.options")
 require("core.keymaps")
 require("core.plugins")
@@ -24,5 +25,8 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.rnix.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.dockerls.setup{}
-require'lspconfig'.bitbake_language_server.setup{}
 require'lspconfig'.bitbake_ls.setup{}
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+require("nvim-treesitter.install").prefer_git = true
